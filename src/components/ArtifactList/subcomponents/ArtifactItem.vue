@@ -103,7 +103,7 @@ const critValue = computed(() => {
 
   props.artifact.substats.forEach(substat => {
     cv += getCv(substat.key, substat.value)
-  });
+  })
 
   return cv
 })

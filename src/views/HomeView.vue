@@ -17,7 +17,7 @@
 import { ref, computed } from 'vue'
 import { ArtifactList } from '../components/ArtifactList'
 import { type GOOD } from '../types/GOOD'
-import { useI18n } from 'vue-i18n';
+import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
