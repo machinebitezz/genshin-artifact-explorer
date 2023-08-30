@@ -4,7 +4,9 @@ export default {
     'critValue': 'Crit Value',
     'substats': 'Substats',
     'mainStat': 'Main Stat',
-    'level': 'Level'
+    'level': 'Level',
+    'import': 'Import artifacts',
+    'upload': 'Upload JSON'
   },
   slot: {
     'flower': 'Flower',
