@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { GOOD } from '../../types/GOOD';
+import { type GOOD } from '../../types/GOOD'
 import ArtifactItem from './subcomponents/ArtifactItem.vue'
 
 interface Props {

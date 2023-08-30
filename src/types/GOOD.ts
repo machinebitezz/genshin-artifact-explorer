@@ -1,4 +1,4 @@
-import { type Artifact } from './Artifact.ts'
+import { type Artifact } from './Artifact'
 
 export interface GOOD {
   format: String

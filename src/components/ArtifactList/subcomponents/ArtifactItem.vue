@@ -42,9 +42,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
-import { Artifact } from '../../../types/Artifact'
-import { useI18n } from 'vue-i18n';
+import { computed } from 'vue'
+import { type Artifact } from '../../../types/Artifact'
+import { useI18n } from 'vue-i18n'
 
 interface Props {
   artifact: Artifact
@@ -66,7 +66,7 @@ const imgURI = computed(() => {
   }
 
   const setName = props.artifact.setKey.split(/(?=[A-Z'])/).map(item => item.toLowerCase()).join('-')
-  const slot = keyToArg[props.artifact.slotKey]
+  const slot = keyToArg[props.artifact.slotKey as keyof typeof keyToArg]
 
   return `https://api.genshin.dev/artifacts/${setName}/${slot}.png`
 })
