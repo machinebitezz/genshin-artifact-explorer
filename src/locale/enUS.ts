@@ -6,7 +6,14 @@ export default {
     'mainStat': 'Main Stat',
     'level': 'Level',
     'import': 'Import artifacts',
-    'upload': 'Upload JSON'
+    'upload': 'Upload JSON',
+    importDialog: {
+      'title': 'Import Artifacts',
+      'via1': 'You can import artifacts by uploading a file',
+      'filePrompt': 'Upload GOOD format JSON file',
+      'via2': 'Or by pasting the contents of your file in the textbox bellow',
+      'tool': 'You can scan your inventory using '
+    }
   },
   slot: {
     'flower': 'Flower',

@@ -6,7 +6,14 @@ export default {
     'mainStat': 'Atributo',
     'level': 'Nível',
     'import': 'Importar artefatos',
-    'upload': 'Carregar JSON'
+    'upload': 'Carregar JSON',
+    importDialog: {
+      'title': 'Importar Artefatos',
+      'via1': 'Você pode importar artefatos realizando o upload de um arquivo',
+      'filePrompt': 'Fazer upload de arquivo JSON no formato GOOD',
+      'via2': 'Ou colando o conteúdo do arquivo na caixa de texto abaixo',
+      'tool': 'Você pode escanear o seu inventário usando a '
+    }
   },
   slot: {
     'flower': 'Flor',

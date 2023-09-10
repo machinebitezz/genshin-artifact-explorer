@@ -16,12 +16,12 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { ArtifactList } from '../components/ArtifactList'
-import { type GOOD } from '../types/GOOD'
+import { ArtifactList } from '@/components/ArtifactList'
+import { type GOOD } from '@/types/GOOD'
 import { useI18n } from 'vue-i18n'
-import SimpleButton from '../components/SimpleButton.vue'
-import TestDialog from '../components/dialogs/TestDialog.vue'
-import dialog from '../utils/dialog'
+import SimpleButton from '@/components/SimpleButton.vue'
+import ImportDialog from '@/components/dialogs/ImportDialog.vue'
+import { useModal } from 'vue-final-modal'
 
 const { t } = useI18n()
 
@@ -35,18 +35,14 @@ const items = computed<GOOD>(() => {
   return {}
 })
 
-function openImportDialog() {
-  dialog(TestDialog, {
-    onOk: (unmount: () => void) => {
-      console.log('ok')
-      unmount()
-    },
+const { open, close } = useModal({
+  component: ImportDialog,
+  attrs: {
+    onConfirm: () => close()
+  }
+})
 
-    onClose: (unmount: () => void) => {
-      console.log('close')
-      unmount()
-    }
-  })
+function openImportDialog() {
+  open()
 }
 </script>
-../utils
